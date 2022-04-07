@@ -11,6 +11,14 @@
   </p>
   <Youtube id="q2Y3f0lHnMs" />
 
+  <ul>
+    <li>
+      <a href="https://github.com/sharu725/youtube-embed">Github</a>
+    </li>
+    <li>
+      <a href="https://www.npmjs.com/package/svelte-youtube-embed">npm</a>
+    </li>
+  </ul>
 </div>
 
 <style>
@@ -19,5 +27,13 @@
     margin: 0 auto;
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    margin-right: 1rem;
   }
 </style>

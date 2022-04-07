@@ -1,6 +1,6 @@
 {
   "name": "svelte-youtube-embed",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
@@ -19,5 +19,9 @@
   },
   "exports": {
     ".": "./Youtube.svelte"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sharu725/youtube-embed"
   }
 }
