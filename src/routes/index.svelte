@@ -4,12 +4,21 @@
 
 <div class="container">
   <h1>Youtube Video Embed</h1>
+
   <p>
     This provides a fast way to embed youtube videos since it loads the youtube
     thumbnail istead of the iframe. It loads the iframe and starts playing upong
     clicking the play button.
   </p>
+
+  <h2>Default</h2>
   <Youtube id="q2Y3f0lHnMs" />
+
+  <h2>With custom play button</h2>
+
+  <Youtube id="q2Y3f0lHnMs">
+    <button>play</button>
+  </Youtube>
 
   <ul>
     <li>

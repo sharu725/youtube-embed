@@ -2,6 +2,7 @@
   import Button from "./Button.svelte";
   export let id = null;
   let play = false;
+  const isCustomPlayButton = $$slots.default;
 </script>
 
 <div class="yt">
@@ -19,7 +20,9 @@
       alt="Youtube video"
       referrerpolicy="no-referrer"
     />
-    <Button on:click={() => (play = true)} />
+    <Button on:click={() => (play = true)} {isCustomPlayButton}>
+      <slot />
+    </Button>
   {/if}
 </div>
 
