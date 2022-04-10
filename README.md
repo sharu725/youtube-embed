@@ -1,6 +1,6 @@
 # Svelte Youtube Embed
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Embeds a clickable youtube thumbnail instead of the iframe. Upon clicking, loads the iframe.
@@ -49,6 +49,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://computly.me"><img src="https://avatars.githubusercontent.com/u/12211826?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Amr</b></sub></a><br /><a href="#design-416d72" title="Design">🎨</a></td>
+    <td align="center"><a href="https://webjeda.com"><img src="https://avatars.githubusercontent.com/u/8033084?v=4?s=100" width="100px;" alt=""/><br /><sub><b>sharath Kumar</b></sub></a><br /><a href="#platform-sharu725" title="Packaging/porting to new platform">📦</a></td>
   </tr>
 </table>
 
