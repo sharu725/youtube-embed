@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "416d72",
+      "name": "Amr",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12211826?v=4",
+      "profile": "https://computly.me",
+      "contributions": [
+        "design"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "youtube-embed",
+  "projectOwner": "sharu725",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
