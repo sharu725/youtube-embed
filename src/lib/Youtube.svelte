@@ -20,6 +20,7 @@
       alt="Youtube video"
       referrerpolicy="no-referrer"
     />
+    <div class="overlay" on:click={() => (play = true)} />
     <Button on:click={() => (play = true)} {isCustomPlayButton}>
       <slot />
     </Button>
@@ -36,5 +37,17 @@
     height: auto;
     aspect-ratio: 16/9;
     width: 100%;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    aspect-ratio: 16/9;
+    cursor: pointer;
+    transition: var(--overlay-transition, all 250ms ease-in-out);
+  }
+  .yt:hover .overlay {
+    background: var(--overlay-bg-color, rgba(0, 0, 0, 0.1));
   }
 </style>

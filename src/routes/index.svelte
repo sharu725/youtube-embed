@@ -20,6 +20,10 @@
     <button>play</button>
   </Youtube>
 
+  <h2>Using custom overlay</h2>
+
+  <Youtube id="q2Y3f0lHnMs" --overlay-bg-color="rgba(184, 75, 132, 0.3)" --overlay-transition="all 100ms linear" />
+
   <ul>
     <li>
       <a href="https://github.com/sharu725/youtube-embed">Github</a>
