@@ -24,6 +24,10 @@ Embeds a clickable youtube thumbnail instead of the iframe. Upon clicking, loads
 <Youtube id="q2Y3f0lHnMs">
   <button>play</button>
 </Youtube>
+
+<!-- Custom overlay -->
+<Youtube id="q2Y3f0lHnMs" --overlay-bg-color="hsla(0, 0%, 0%, 0.3)" --overlay-transition="all 100ms linear" />
+
 ```
 
 The `id` is youtube video id. In this video link `https://www.youtube.com/watch?v=q2Y3f0lHnMs`, the id is `q2Y3f0lHnMs`.
