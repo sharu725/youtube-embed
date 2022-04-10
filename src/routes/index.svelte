@@ -5,6 +5,7 @@
 
   let titleColor = "#000000";
   let titleShadowColor = "#ffffff";
+  let titleFontFamily = "'Segoe UI', Geneva, Verdana, sans-serif";
 
   let alternativeThumbnail = false;
 </script>
@@ -55,13 +56,28 @@
     <input id="title-color-select" type="color" bind:value={titleColor} />
     <label for="title-shadow-color">Title shadow color</label>
     <input id="title-shadow-color" type="color" bind:value={titleShadowColor} />
+    <label for="title-font-family">Font family</label>
+    <select
+      name="title-font-family"
+      id="title-font-family"
+      bind:value={titleFontFamily}
+    >
+      <option value="'Roboto', sans-serif">Roboto</option>
+      <option value="'Segoe UI', Geneva, Verdana, sans-serif">Segoe UI</option>
+      <option value="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        >Helvetica Neue</option
+      >
+      <option value="'Times New Roman', Times, serif">Times New Roman</option>
+      <option value="'Courier New', Courier, monospace">Courier New</option>
+    </select>
   </div>
-  <pre>&lt;Youtube id="kgZeIDSHlhQ" --title-color={titleColor} --title-shadow-color={titleShadowColor}30 /&gt;</pre>
+  <pre>&lt;Youtube id="kgZeIDSHlhQ" --title-color="{titleColor}" --title-shadow-color="{titleShadowColor}30" --title-font-family="{titleFontFamily}" /&gt;</pre>
 
   <Youtube
     id="kgZeIDSHlhQ"
     --title-color={titleColor}
     --title-shadow-color="{titleShadowColor}30"
+    --title-font-family={titleFontFamily}
   />
 
   <h2>Alternative thumbnail</h2>
@@ -120,5 +136,6 @@
     background-color: #e9e9e9;
     border: 1px solid rgb(180, 180, 180);
     border-radius: 3px;
+    white-space: pre-wrap;
   }
 </style>

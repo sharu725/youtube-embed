@@ -27,7 +27,9 @@
       />
     {:else}
       <img
-        src="https://i.ytimg.com/vi/{id}/{alternativeThumbnail ? 'hqdefault' : 'maxresdefault'}.jpg"
+        src="https://i.ytimg.com/vi/{id}/{alternativeThumbnail
+          ? 'hqdefault'
+          : 'maxresdefault'}.jpg"
         title={jsonObj.title}
         alt="Youtube video: {jsonObj.title}"
         referrerpolicy="no-referrer"
@@ -60,7 +62,13 @@
     pointer-events: none;
   }
   .video-title h3 {
-    font-family: "Segoe UI", Geneva, Verdana, sans-serif;
+    font-family: var(
+      --title-font-family,
+      "Segoe UI",
+      Geneva,
+      Verdana,
+      sans-serif
+    );
     color: var(--title-color, #ffffff);
     padding: 0 2ch;
     font-weight: 400;
