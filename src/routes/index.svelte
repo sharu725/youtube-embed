@@ -1,5 +1,12 @@
 <script>
   import Youtube from "$lib/Youtube.svelte";
+  let overlayBGColor = "#e5a50a";
+  let overlayTransitionDuration = 50;
+
+  let titleColor = "#000000";
+  let titleShadowColor = "#ffffff";
+
+  let alternativeThumbnail = false;
 </script>
 
 <div class="container">
@@ -21,8 +28,59 @@
   </Youtube>
 
   <h2>Using custom overlay</h2>
+  <div class="controls">
+    <label for="overlay-color-select">Overlay color</label>
+    <input id="overlay-color-select" type="color" bind:value={overlayBGColor} />
+    <label for="overlay-transition-duration">Overlay transition duration</label>
+    <input
+      id="overlay-transition-duration"
+      min="0"
+      max="1000"
+      type="range"
+      step="50"
+      bind:value={overlayTransitionDuration}
+    />
+  </div>
+  <pre>&lt;Youtube id="q2Y3f0lHnMs" --overlay-bg-color="{overlayBGColor}30" --overlay-transition="all {overlayTransitionDuration}ms linear" /&gt;</pre>
 
-  <Youtube id="q2Y3f0lHnMs" --overlay-bg-color="rgba(184, 75, 132, 0.3)" --overlay-transition="all 100ms linear" />
+  <Youtube
+    id="q2Y3f0lHnMs"
+    --overlay-bg-color="{overlayBGColor}30"
+    --overlay-transition="all {overlayTransitionDuration}ms linear"
+  />
+
+  <h2>Using custom title colors</h2>
+  <div class="controls">
+    <label for="title-color-select">Title color</label>
+    <input id="title-color-select" type="color" bind:value={titleColor} />
+    <label for="title-shadow-color">Title shadow color</label>
+    <input id="title-shadow-color" type="color" bind:value={titleShadowColor} />
+  </div>
+  <pre>&lt;Youtube id="kgZeIDSHlhQ" --title-color={titleColor} --title-shadow-color={titleShadowColor}30 /&gt;</pre>
+
+  <Youtube
+    id="kgZeIDSHlhQ"
+    --title-color={titleColor}
+    --title-shadow-color="{titleShadowColor}30"
+  />
+
+  <h2>Alternative thumbnail</h2>
+  <sub>
+    Some videos don't have custom thumbnail, so you can use this option to set
+    the thumbnail to the default one.
+  </sub>
+  <div class="controls">
+    <label for="alt-thumbnail-checkbox">Toggle</label>
+    <input
+      id="alt-thumbnail-checkbox"
+      type="checkbox"
+      bind:checked={alternativeThumbnail}
+    />
+  </div>
+
+  <pre>&lt;Youtube id="g50dm1OCV3w" alternativeThumbnail=&lbrace;{alternativeThumbnail}&rbrace; /&gt;</pre>
+
+  <Youtube id="g50dm1OCV3w" {alternativeThumbnail} />
 
   <ul>
     <li>
@@ -48,5 +106,19 @@
   }
   li {
     margin-right: 1rem;
+  }
+  .controls {
+    display: flex;
+    align-items: center;
+    margin: 1rem auto;
+  }
+  .controls label {
+    margin-left: 1em;
+  }
+  pre {
+    padding: 0.5em 1em;
+    background-color: #e9e9e9;
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 3px;
   }
 </style>
