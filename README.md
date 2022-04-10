@@ -19,9 +19,15 @@ Embeds a clickable youtube thumbnail instead of the iframe. Upon clicking, loads
 </script>
 
 <Youtube id="q2Y3f0lHnMs" />
+
+<!-- custom play button -->
+<Youtube id="q2Y3f0lHnMs">
+  <button>play</button>
+</Youtube>
 ```
 
 The `id` is youtube video id. In this video link `https://www.youtube.com/watch?v=q2Y3f0lHnMs`, the id is `q2Y3f0lHnMs`.
 
 ## Demo
+
 [site](https://embed.sveltethemes.dev/)
