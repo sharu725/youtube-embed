@@ -34,7 +34,7 @@ Embeds a clickable youtube thumbnail instead of the iframe. Upon clicking, loads
 <!-- Custom title -->
 <Youtube id="kgZeIDSHlhQ" --title-color="#111111" --title-shadow-color="#cccccc" --title-font-family="Lato, sans-serif" />
 
-<!-- Alternative thumbnail -->
+<!-- Alternative thumbnail if default thumbnail doesn't show automatically -->
 <Youtube id="g50dm1OCV3w" alternativeThumbnail={true} />
 ```
 
