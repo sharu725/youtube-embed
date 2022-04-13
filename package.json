@@ -1,6 +1,6 @@
 {
   "name": "svelte-youtube-embed",
-  "version": "0.0.10",
+  "version": "0.0.16",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
@@ -11,11 +11,13 @@
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
-    "svelte": "^3.44.0"
+    "svelte": "^3.44.0",
+    "svelte2tsx": "^0.5.8"
   },
   "type": "module",
+  "svelte": "index.js",
   "exports": {
-    ".": "./Youtube.svelte"
+    ".": "./index.js"
   },
   "repository": {
     "type": "git",
