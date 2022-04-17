@@ -12,7 +12,8 @@
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
     "svelte": "^3.44.0",
-    "svelte2tsx": "^0.5.8"
+    "svelte2tsx": "^0.5.8",
+    "mdsvex": "^0.10.5"
   },
   "type": "module",
   "svelte": "index.js",

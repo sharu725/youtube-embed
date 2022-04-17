@@ -7,7 +7,7 @@
   let titleShadowColor = "#ffffff";
   let titleFontFamily = "'Segoe UI', Geneva, Verdana, sans-serif";
 
-  let alternativeThumbnail = false;
+  let altThumb = false;
 </script>
 
 <div class="container">
@@ -22,11 +22,21 @@
   <h2>Default</h2>
   <Youtube id="q2Y3f0lHnMs" />
 
+```svelte
+<Youtube id="q2Y3f0lHnMs" />
+```
+
   <h2>With custom play button</h2>
 
   <Youtube id="q2Y3f0lHnMs">
     <button>play</button>
   </Youtube>
+
+```svelte
+<Youtube id="q2Y3f0lHnMs">
+  <button>play</button>
+</Youtube>
+```
 
   <h2>Using custom overlay</h2>
   <div class="controls">
@@ -42,13 +52,20 @@
       bind:value={overlayTransitionDuration}
     />
   </div>
-  <pre>&lt;Youtube id="q2Y3f0lHnMs" --overlay-bg-color="{overlayBGColor}30" --overlay-transition="all {overlayTransitionDuration}ms linear" /&gt;</pre>
 
-  <Youtube
-    id="q2Y3f0lHnMs"
-    --overlay-bg-color="{overlayBGColor}30"
-    --overlay-transition="all {overlayTransitionDuration}ms linear"
-  />
+<Youtube
+id="q2Y3f0lHnMs"
+--overlay-bg-color="{overlayBGColor}30"
+--overlay-transition="all {overlayTransitionDuration}ms linear"
+/>
+
+```svelte
+<Youtube
+id="q2Y3f0lHnMs"
+--overlay-bg-color="{overlayBGColor}30"
+--overlay-transition="all {overlayTransitionDuration}ms linear"
+/>
+```
 
   <h2>Using custom title colors</h2>
   <div class="controls">
@@ -71,32 +88,42 @@
       <option value="'Courier New', Courier, monospace">Courier New</option>
     </select>
   </div>
-  <pre>&lt;Youtube id="kgZeIDSHlhQ" --title-color="{titleColor}" --title-shadow-color="{titleShadowColor}30" --title-font-family="{titleFontFamily}" /&gt;</pre>
 
-  <Youtube
-    id="kgZeIDSHlhQ"
-    --title-color={titleColor}
-    --title-shadow-color="{titleShadowColor}30"
-    --title-font-family={titleFontFamily}
-  />
+<Youtube
+id="kgZeIDSHlhQ"
+--title-color={titleColor}
+--title-shadow-color="{titleShadowColor}30"
+--title-font-family={titleFontFamily}
+/>
+
+```svelte
+<Youtube
+id="kgZeIDSHlhQ"
+--title-color={titleColor}
+--title-shadow-color="{titleShadowColor}30"
+--title-font-family={titleFontFamily}
+/>
+```
 
   <h2>Alternative thumbnail</h2>
-  <sub>
+  <p>
     Some videos don't have custom thumbnail, so you can use this option to set
     the thumbnail to the default one.
-  </sub>
+  </p>
   <div class="controls">
     <label for="alt-thumbnail-checkbox">Toggle</label>
     <input
       id="alt-thumbnail-checkbox"
       type="checkbox"
-      bind:checked={alternativeThumbnail}
+      bind:checked={altThumb}
     />
   </div>
 
-  <pre>&lt;Youtube id="g50dm1OCV3w" alternativeThumbnail=&lbrace;{alternativeThumbnail}&rbrace; /&gt;</pre>
+<Youtube id="g50dm1OCV3w" {altThumb} />
 
-  <Youtube id="g50dm1OCV3w" {alternativeThumbnail} />
+```svelte
+<Youtube id="g50dm1OCV3w" {altThumb} />
+```
 
   <ul>
     <li>

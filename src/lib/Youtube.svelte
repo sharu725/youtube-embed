@@ -1,41 +1,42 @@
 <script>
   import Button from "./Button.svelte";
   export let id = null;
-  export let alternativeThumbnail = false;
+  export let altThumb = false;
 
-  let videoInfo = fetch(
-    `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${id}&format=json`
+  let videoInfo = {};
+  videoInfo = fetch(
+    `//www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${id}&format=json`
   ).then((res) => res.json());
 
   let play = false;
   const isCustomPlayButton = $$slots.default;
 </script>
 
-{#await videoInfo then jsonObj}
+{#await videoInfo then data}
   <div
     class="yt"
-    style="--aspect-ratio:{jsonObj.width / jsonObj.height || '16/9'}"
-    title={jsonObj.title}
+    style="--aspect-ratio:{data.width / data.height || '16/9'}"
+    title={data.title}
   >
     {#if play}
       <iframe
         src="https://www.youtube.com/embed/{id}?autoplay=1&rel=0"
-        title={jsonObj.title}
+        title={data.title}
         frameborder="0"
         allow="autoplay; picture-in-picture; clipboard-write"
         allowfullscreen
       />
     {:else}
       <img
-        src="https://i.ytimg.com/vi/{id}/{alternativeThumbnail
+        src="https://i.ytimg.com/vi/{id}/{altThumb
           ? 'hqdefault'
           : 'maxresdefault'}.jpg"
-        title={jsonObj.title}
-        alt="Youtube video: {jsonObj.title}"
+        title={data.title}
+        alt="Youtube video: {data.title}"
         referrerpolicy="no-referrer"
       />
       <div class="overlay" on:click={() => (play = true)} />
-      <div class="video-title"><h3>{jsonObj.title}</h3></div>
+      <div class="video-title"><h3>{data.title}</h3></div>
       <Button on:click={() => (play = true)} {isCustomPlayButton}>
         <slot />
       </Button>
