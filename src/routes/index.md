@@ -122,7 +122,7 @@ id="kgZeIDSHlhQ"
 <Youtube id="g50dm1OCV3w" {altThumb} />
 
 ```svelte
-<Youtube id="g50dm1OCV3w" {altThumb} />
+<Youtube id="g50dm1OCV3w" altThumb={true} />
 ```
 
   <ul>
