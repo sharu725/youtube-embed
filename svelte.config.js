@@ -8,10 +8,6 @@ const config = {
 
   kit: {
     adapter: adapter(),
-    package: {
-      dir: "package",
-      emitTypes: true,
-    },
   },
 
   preprocess: [mdsvex(mdsvexConfig)],
