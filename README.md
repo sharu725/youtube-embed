@@ -36,7 +36,7 @@ Embeds a clickable youtube thumbnail instead of the iframe. Upon clicking, loads
 <Youtube id="kgZeIDSHlhQ" --title-color="#111111" --title-shadow-color="#cccccc" --title-font-family="Lato, sans-serif" />
 
 <!-- Alternative thumbnail if default thumbnail doesn't show automatically -->
-<Youtube id="g50dm1OCV3w" alternativeThumbnail={true} />
+<Youtube id="g50dm1OCV3w" altThumb={true} />
 ```
 
 The `id` is youtube video id. In this video link `https://www.youtube.com/watch?v=q2Y3f0lHnMs`, the id is `q2Y3f0lHnMs`.
