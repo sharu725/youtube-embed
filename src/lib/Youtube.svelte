@@ -1,10 +1,13 @@
 <script>
   import Button from "./Button.svelte";
+  import Iframe from "./Iframe.svelte";
+  import Image from "./Image.svelte";
+
   export let id = null;
   export let altThumb = false;
 
   let videoInfo = {};
-  
+
   videoInfo = fetch(
     `//www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${id}&format=json`
   ).then((res) => res.json());
@@ -13,31 +16,20 @@
   const isCustomPlayButton = $$slots.default;
 </script>
 
-{#await videoInfo then data}
+{#await videoInfo then { title, width, height }}
   <div
     class="you__tube"
-    style="--aspect-ratio:{data.width / data.height || '16/9'}"
-    title={data.title}
+    style="--aspect-ratio:{width / height || '16/9'}"
+    {title}
   >
     {#if play}
-      <iframe
-        src="https://www.youtube.com/embed/{id}?autoplay=1&rel=0"
-        title={data.title}
-        frameborder="0"
-        allow="autoplay; picture-in-picture; clipboard-write"
-        allowfullscreen
-      />
+      <Iframe {play} {id} {title} />
     {:else}
-      <img
-        src="https://i.ytimg.com/vi/{id}/{altThumb
-          ? 'hqdefault'
-          : 'maxresdefault'}.jpg"
-        title={data.title}
-        alt="Youtube video: {data.title}"
-        referrerpolicy="no-referrer"
-      />
+      <Image {id} {title} {altThumb} {play} />
       <div class="b__overlay" on:click={() => (play = true)} />
-      <div class="v__title"><h3>{data.title}</h3></div>
+      <div class="v__title"><h3>{title}</h3></div>
+    {/if}
+    {#if !play}
       <Button on:click={() => (play = true)} {isCustomPlayButton}>
         <slot />
       </Button>
@@ -49,12 +41,7 @@
   .you__tube {
     position: relative;
   }
-  img,
-  iframe {
-    height: auto;
-    aspect-ratio: var(--aspect-ratio);
-    width: 100%;
-  }
+
   .v__title {
     position: absolute;
     top: 0;
