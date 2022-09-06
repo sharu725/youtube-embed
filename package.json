@@ -1,25 +1,25 @@
 {
   "name": "svelte-youtube-embed",
-  "version": "0.1.0",
+  "version": "0.1.6",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "package": "svelte-kit package",
-    "preview": "svelte-kit preview",
-    "prepare": "svelte-kit sync"
+    "package": "svelte-package",
+    "preview": "vite preview"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
+    "@sveltejs/package": "^1.0.0-next.3",
+    "mdsvex": "^0.10.5",
     "svelte": "^3.44.0",
-    "svelte2tsx": "^0.5.8",
-    "mdsvex": "^0.10.5"
+    "svelte-youtube-embed": "^0.1.6",
+    "svelte2tsx": "^0.5.8"
   },
   "type": "module",
-  "svelte": "index.js",
-  "exports": {
-    ".": "./index.js"
-  },
+  "main": "./index.js",
+  "module": "./index.js",
+  "svelte": "./index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/sharu725/youtube-embed"
