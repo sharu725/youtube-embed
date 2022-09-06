@@ -24,11 +24,9 @@
 
 <style>
   button {
-    background: transparent;
-    border: none;
-    font-size: 0;
+    all: unset;
   }
-  svg,
+  button,
   .play-button {
     display: grid;
     place-items: center;
