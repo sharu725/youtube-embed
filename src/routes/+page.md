@@ -136,7 +136,7 @@ id="KrSH82gg7BQ"
 </div>
 
 <svelte:head>
-<title>Svelte Youtube embed</title>
+<title>Svelte Youtube Embed</title>
  <meta name="description" content="Embeds a clickable youtube thumbnail instead of the iframe. Upon clicking, loads the iframe.">
 </svelte:head>
 
