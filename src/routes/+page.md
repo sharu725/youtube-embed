@@ -20,20 +20,20 @@
   </p>
 
   <h2>Default</h2>
-  <Youtube id="qrPySk2Oz68" />
+  <Youtube id="EBtsu6naB8g" />
 
 ```svelte
-<Youtube id="qrPySk2Oz68" />
+<Youtube id="EBtsu6naB8g" />
 ```
 
   <h2>With custom play button</h2>
 
-  <Youtube id="qrPySk2Oz68">
+  <Youtube id="EBtsu6naB8g">
     <button>play</button>
   </Youtube>
 
 ```svelte
-<Youtube id="qrPySk2Oz68">
+<Youtube id="EBtsu6naB8g">
   <button>play</button>
 </Youtube>
 ```
@@ -54,14 +54,14 @@
   </div>
 
 <Youtube
-id="qrPySk2Oz68"
+id="EBtsu6naB8g"
 --overlay-bg-color="{overlayBGColor}30"
 --overlay-transition="all {overlayTransitionDuration}ms linear"
 />
 
 ```svelte
 <Youtube
-id="qrPySk2Oz68"
+id="EBtsu6naB8g"
 --overlay-bg-color="{overlayBGColor}30"
 --overlay-transition="all {overlayTransitionDuration}ms linear"
 />
