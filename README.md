@@ -13,7 +13,7 @@ Embeds a clickable youtube thumbnail instead of the iframe. Upon clicking, loads
 
 ## Installation
 
-````bash
+```bash
 npm i -D svelte-youtube-embed
 ```
 
