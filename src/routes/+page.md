@@ -90,7 +90,7 @@ id="q2Y3f0lHnMs"
   </div>
 
 <Youtube
-id="kgZeIDSHlhQ"
+id="KrSH82gg7BQ"
 --title-color={titleColor}
 --title-shadow-color="{titleShadowColor}30"
 --title-font-family={titleFontFamily}
@@ -98,7 +98,7 @@ id="kgZeIDSHlhQ"
 
 ```svelte
 <Youtube
-id="kgZeIDSHlhQ"
+id="KrSH82gg7BQ"
 --title-color={titleColor}
 --title-shadow-color="{titleShadowColor}30"
 --title-font-family={titleFontFamily}
@@ -134,6 +134,11 @@ id="kgZeIDSHlhQ"
     </li>
   </ul>
 </div>
+
+<svelte:head>
+<title>Svelte Youtube embed</title>
+ <meta name="description" content="Embeds a clickable youtube thumbnail instead of the iframe. Upon clicking, loads the iframe.">
+</svelte:head>
 
 <style>
   .container {
