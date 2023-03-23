@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from "svelte";
   import Button from "./Button.svelte";
   import Iframe from "./Iframe.svelte";
   import Image from "./Image.svelte";
@@ -7,10 +8,12 @@
   export let altThumb = false;
 
   let videoInfo = {};
-
-  videoInfo = fetch(
-    `//www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${id}&format=json`
-  ).then((res) => res.json());
+  onMount(async () => {
+    const res = await fetch(
+      `//www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${id}&format=json`
+    );
+    videoInfo = await res.json();
+  });
 
   let play = false;
   const isCustomPlayButton = $$slots.default;
