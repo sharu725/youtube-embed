@@ -28,7 +28,7 @@
 
   <h2>With custom play button</h2>
 
-  <Youtube id="EBtsu6naB8g">
+  <Youtube id="EBtsu6naB8g" animations={false}>
     <button>play</button>
   </Youtube>
 
@@ -125,6 +125,17 @@ id="KrSH82gg7BQ"
 <Youtube id="g50dm1OCV3w" altThumb={true} />
 ```
 
+  <h2>Disable animations</h2>
+  <p>
+    You can disable animation that is displayed when the play button is clicked by passing `animations` attribute.
+  </p>
+
+<Youtube id="EBtsu6naB8g" animations={false} />
+
+```svelte
+<Youtube id="EBtsu6naB8g" animations={false} />
+```
+
   <ul>
     <li>
       <a href="https://github.com/sharu725/youtube-embed">Github</a>
@@ -136,6 +147,7 @@ id="KrSH82gg7BQ"
 </div>
 
 <svelte:head>
+
 <title>Svelte Youtube Embed</title>
  <meta name="description" content="Embeds a clickable youtube thumbnail instead of the iframe. Upon clicking, loads the iframe.">
 </svelte:head>

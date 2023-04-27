@@ -2,6 +2,7 @@
   import { scale } from "svelte/transition";
   export let title = "";
   export let id = "";
+  export let animations;
 </script>
 
 <iframe
@@ -10,7 +11,7 @@
   frameborder="0"
   allow="autoplay; picture-in-picture; clipboard-write"
   allowfullscreen
-  in:scale={{ delay: 500, duration: 800 }}
+  in:scale={animations ? { delay: 500, duration: 800 } : {}}
 />
 
 <style>

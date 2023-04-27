@@ -6,6 +6,7 @@
 
   export let id = null;
   export let altThumb = false;
+  export let animations = true;
 
   let videoInfo = {};
   onMount(async () => {
@@ -26,7 +27,7 @@
     {title}
   >
     {#if play}
-      <Iframe {play} {id} {title} />
+      <Iframe {play} {id} {title} {animations} />
     {:else}
       <Image {id} {title} {altThumb} {play} />
       <div class="b__overlay" on:click={() => (play = true)} />
