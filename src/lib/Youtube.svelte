@@ -8,42 +8,54 @@
   export let altThumb = false;
   export let animations = true;
 
+  let title = "";
+  let width = 0;
+  let height = 0;
+
   let videoInfo = {};
   onMount(async () => {
     const res = await fetch(
       `//www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${id}&format=json`
     );
     videoInfo = await res.json();
+    title = videoInfo?.title;
+    width = videoInfo?.width;
+    height = videoInfo?.height;
   });
 
   let play = false;
   const isCustomPlayButton = $$slots.default;
+  const isCustomThumbnail = $$slots.thumbnail;
 </script>
 
-{#await videoInfo then { title, width, height }}
-  <div
-    class="you__tube"
-    style="--aspect-ratio:{width / height || '16/9'}"
-    {title}
-  >
-    {#if play}
-      <Iframe {play} {id} {title} {animations} />
+<div
+  class="you__tube"
+  style="--aspect-ratio:{width / height || '16/9'}"
+  {title}
+>
+  {#if play}
+    <Iframe {play} {id} {title} {animations} />
+  {:else}
+    {#if isCustomThumbnail}
+      <slot name="thumbnail" />
     {:else}
       <Image {id} {title} {altThumb} {play} />
-      <div class="b__overlay" on:click={() => (play = true)} />
-      <div class="v__title"><h3>{title}</h3></div>
     {/if}
-    {#if !play}
-      <Button on:click={() => (play = true)} {isCustomPlayButton}>
-        <slot />
-      </Button>
-    {/if}
-  </div>
-{/await}
+    <div class="b__overlay" on:click={() => (play = true)} />
+    <div class="v__title"><h3>{title}</h3></div>
+  {/if}
+  {#if !play}
+    <Button on:click={() => (play = true)} {isCustomPlayButton}>
+      <slot />
+    </Button>
+  {/if}
+</div>
 
 <style>
   .you__tube {
     position: relative;
+    aspect-ratio: 1.76991;
+    overflow: hidden;
   }
 
   .v__title {
