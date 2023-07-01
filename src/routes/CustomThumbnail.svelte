@@ -16,9 +16,9 @@
 <Youtube id="EBtsu6naB8g">
   <img
     slot="thumbnail"
-    src="https://kit.svelte.dev/_app/immutable/assets/svelte-kit-machine.93687d2d.avif"
+    src="https://picsum.photos/id/74/4288/2848"
     alt="A video on svelte"
-    style="width: 100%; height: 100%; object-fit: contain; object-position: center; background: #ff4000"
+    style="width: 100%; height: 100%; object-fit: cover; object-position: center; background: red"
   />
 </Youtube>
 
