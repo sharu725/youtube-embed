@@ -1,6 +1,6 @@
 {
   "name": "svelte-youtube-embed",
-  "version": "0.1.20",
+  "version": "0.1.5",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
@@ -19,8 +19,6 @@
     "svelte2tsx": "^0.5.8"
   },
   "type": "module",
-  "main": "./index.js",
-  "module": "./index.js",
   "svelte": "./index.js",
   "repository": {
     "type": "git",
