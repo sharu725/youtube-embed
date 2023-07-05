@@ -3,11 +3,11 @@
 </script>
 
 {#if isCustomPlayButton}
-  <div class="play-button" on:click>
+  <div class="play-button" on:click aria-label="Play YouTube video">
     <slot />
   </div>
 {:else}
-  <button on:click
+  <button on:click aria-label="Play YouTube video"
     ><svg
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
