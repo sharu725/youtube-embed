@@ -8,6 +8,8 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@sveltejs/adapter-auto": "^2.1.0",
+    "@sveltejs/adapter-vercel": "^3.0.2",
     "@sveltejs/kit": "1.22.2",
     "@sveltejs/package": "^1.0.2",
     "mdsvex": "^0.10.6",
@@ -24,8 +26,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/sharu725/youtube-embed"
-  },
-  "dependencies": {
-    "@sveltejs/adapter-auto": "^2.1.0"
   }
 }
