@@ -3,11 +3,11 @@
 </script>
 
 {#if isCustomPlayButton}
-  <div class="play-button" on:click aria-label="Play YouTube video">
+  <button class="custom__play__btn" on:click aria-label="Play YouTube video">
     <slot />
-  </div>
+  </button>
 {:else}
-  <button on:click aria-label="Play YouTube video"
+  <button class="play__btn" on:click aria-label="Play YouTube video"
     ><svg
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
@@ -23,15 +23,26 @@
 {/if}
 
 <style>
-  button {
+  .play__btn,
+  .custom__play__btn {
     all: unset;
   }
-  button,
-  .play-button {
+  .play__btn {
     display: grid;
     place-items: center;
     height: 80px;
     width: 80px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    cursor: pointer;
+  }
+  .custom__play__btn {
+    display: grid;
+    place-items: center;
     position: absolute;
     top: 0;
     right: 0;
