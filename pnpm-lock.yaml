@@ -8,7 +8,7 @@ specifiers:
   prism-svelte: ^0.5.0
   prismjs: ^1.29.0
   svelte: ^3.59.2
-  svelte-youtube-embed: ^0.2.0
+  svelte-youtube-embed: ^0.2.1
   svelte2tsx: ^0.5.23
   typescript: ^4.9.5
   vite: ^4.4.3
@@ -23,7 +23,7 @@ devDependencies:
   prism-svelte: 0.5.0
   prismjs: 1.29.0
   svelte: 3.59.2
-  svelte-youtube-embed: 0.2.0
+  svelte-youtube-embed: 0.2.1_@sveltejs+kit@1.22.2
   svelte2tsx: 0.5.23_iswo7uadljeyepwefr7yw27cie
   typescript: 4.9.5
   vite: 4.4.3
@@ -219,7 +219,6 @@ packages:
     dependencies:
       '@sveltejs/kit': 1.22.2_svelte@3.59.2+vite@4.4.3
       import-meta-resolve: 3.0.0
-    dev: false
 
   /@sveltejs/kit/1.22.2_svelte@3.59.2+vite@4.4.3:
     resolution: {integrity: sha512-T6GY5jSfQgoDnNPNqAuDi9IK+ZW0TspzTV16UAN6GTsxbri67DGVIbw7QOXPg8FMrZQMmda1AtAxPMfXbOqCgw==}
@@ -426,7 +425,6 @@ packages:
 
   /import-meta-resolve/3.0.0:
     resolution: {integrity: sha512-4IwhLhNNA8yy445rPjD/lWh++7hMDOml2eHtd58eG7h+qK3EryMuuRbsHGPikCoAgIkkDnckKfWSk2iDla/ejg==}
-    dev: false
 
   /is-binary-path/2.1.0:
     resolution: {integrity: sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==}
@@ -596,8 +594,12 @@ packages:
     dependencies:
       svelte: 3.59.2
 
-  /svelte-youtube-embed/0.2.0:
-    resolution: {integrity: sha512-cZePUF8TFdBxZE65HXE450QeWBqouTRFMsZdIwbkCCYSho74KhHMD/ud04hkRdywojijWuTLkUDkh64EUtadWA==}
+  /svelte-youtube-embed/0.2.1_@sveltejs+kit@1.22.2:
+    resolution: {integrity: sha512-uVkRzO+DJnMtc8MVIcDwTIkNcrtU3Fy+LOMGpbzgja+RsBwKUOScmCtJahZBIJIxEBH5iz94epGjrt2F9CbdqA==}
+    dependencies:
+      '@sveltejs/adapter-auto': 2.1.0_@sveltejs+kit@1.22.2
+    transitivePeerDependencies:
+      - '@sveltejs/kit'
     dev: true
 
   /svelte/3.59.2:
