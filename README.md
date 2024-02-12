@@ -1,6 +1,9 @@
 # Svelte Youtube Embed
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Embeds a clickable youtube thumbnail instead of the iframe. Upon clicking, loads the iframe.
@@ -24,24 +27,33 @@ npm i -D svelte-youtube-embed
   import Youtube from "svelte-youtube-embed";
 </script>
 
-<Youtube id="q2Y3f0lHnMs" />
+<Youtube id="KrSH82gg7BQ" />
 
 <!-- custom play button -->
-<Youtube id="q2Y3f0lHnMs">
+<Youtube id="KrSH82gg7BQ">
   <button>play</button>
 </Youtube>
 
 <!-- Custom overlay -->
-<Youtube id="q2Y3f0lHnMs" --overlay-bg-color="hsla(0, 0%, 0%, 0.3)" --overlay-transition="all 100ms linear" />
+<Youtube
+  id="KrSH82gg7BQ"
+  --overlay-bg-color="hsla(0, 0%, 0%, 0.3)"
+  --overlay-transition="all 100ms linear"
+/>
 
 <!-- Custom title -->
-<Youtube id="kgZeIDSHlhQ" --title-color="#111111" --title-shadow-color="#cccccc" --title-font-family="Lato, sans-serif" />
+<Youtube
+  id="kgZeIDSHlhQ"
+  --title-color="#111111"
+  --title-shadow-color="#cccccc"
+  --title-font-family="Lato, sans-serif"
+/>
 
 <!-- Alternative thumbnail if default thumbnail doesn't show automatically -->
-<Youtube id="g50dm1OCV3w" altThumb={true} />
+<Youtube id="g50dm1OCV3w" altThumb="{true}" />
 ```
 
-The `id` is youtube video id. In this video link `https://www.youtube.com/watch?v=q2Y3f0lHnMs`, the id is `q2Y3f0lHnMs`.
+The `id` is youtube video id. In this video link `https://www.youtube.com/watch?v=KrSH82gg7BQ`, the id is `KrSH82gg7BQ`.
 
 ## Demo
 

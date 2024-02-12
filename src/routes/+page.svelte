@@ -27,7 +27,6 @@
 </svelte:head>
 
 <style>
-
   :global(.controls) {
     display: flex;
     align-items: center;
