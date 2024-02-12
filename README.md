@@ -12,7 +12,6 @@ Embeds a clickable youtube thumbnail instead of the iframe. Upon clicking, loads
 
 - loads the site faster
 - responsive image & video
-- [less than 1KB (minified & gzipped)](https://bundlephobia.com/package/svelte-youtube-embed)
 
 ## Installation
 
