@@ -34,7 +34,7 @@
   {title}
 >
   {#if play}
-    <Iframe {play} {id} {title} {animations} />
+    <Iframe {id} {title} {animations} />
   {:else}
     {#if isCustomThumbnail}
       <slot name="thumbnail" />

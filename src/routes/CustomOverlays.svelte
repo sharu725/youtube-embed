@@ -34,3 +34,5 @@
   --overlay-transition="all {overlayTransitionDuration}ms linear"
   />`}
 />
+
+<p>Here the number `30` represents the opacity of `0.3`. Remove it for 100% opaqueness.</p>
