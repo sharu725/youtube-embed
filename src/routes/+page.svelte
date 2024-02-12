@@ -5,8 +5,9 @@
   import CustomTitleColors from "./CustomTitleColors.svelte";
   import AlternativeThumbnail from "./AlternativeThumbnail.svelte";
   import DisableAnimations from "./DisableAnimations.svelte";
-  import Footer from "./Footer.svelte";
   import CustomThumbnail from "./CustomThumbnail.svelte";
+  import EnhancedPrivacy from "./EnhancedPrivacy.svelte";
+  import Footer from "./Footer.svelte";
 </script>
 
 <Intro />
@@ -16,6 +17,7 @@
 <AlternativeThumbnail />
 <DisableAnimations />
 <CustomThumbnail />
+<EnhancedPrivacy />
 <Footer />
 
 <svelte:head>

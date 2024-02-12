@@ -7,6 +7,7 @@
   export let id = null;
   export let altThumb = false;
   export let animations = true;
+  export let noCookieMode = false;
 
   let title = "";
   let width = 0;
@@ -34,14 +35,18 @@
   {title}
 >
   {#if play}
-    <Iframe {play} {id} {title} {animations} />
+    <Iframe {play} {id} {title} {animations} {noCookieMode} />
   {:else}
     {#if isCustomThumbnail}
       <slot name="thumbnail" />
     {:else}
       <Image {id} {title} {altThumb} {play} />
     {/if}
-    <div class="b__overlay" on:click={() => (play = true)} on:keypress={() => (play = true)} />
+    <div
+      class="b__overlay"
+      on:click={() => (play = true)}
+      on:keypress={() => (play = true)}
+    />
     <div class="v__title"><h3>{title}</h3></div>
   {/if}
   {#if !play}
