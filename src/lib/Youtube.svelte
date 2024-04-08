@@ -8,9 +8,9 @@
   export let altThumb = false;
   export let animations = true;
 
-  let title = "";
-  let width = 0;
-  let height = 0;
+  export let title = "";
+  export let width = 0;
+  export let height = 0;
 
   let videoInfo = {};
   onMount(async () => {
@@ -19,8 +19,8 @@
     );
     videoInfo = await res.json();
     title = videoInfo?.title;
-    width = videoInfo?.width;
-    height = videoInfo?.height;
+    width = width || videoInfo?.width;
+    height = height || videoInfo?.height;
   });
 
   let play = false;
