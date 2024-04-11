@@ -3,8 +3,9 @@
   "version": "0.3.0",
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build",
-    "package": "svelte-package",
+    "build": "vite build && npm run package",
+    "package": "svelte-kit sync && svelte-package",
+    "prepare": "npm run package",
     "preview": "vite preview"
   },
   "devDependencies": {
@@ -20,14 +21,17 @@
     "typescript": "^5.3.2",
     "vite": "^5.0.11"
   },
-  "dependencies": {
-    "svelte": "^4.2.7"
+  "peerDependencies": {
+    "svelte": "^4.0.0"
   },
   "type": "module",
   "files": [
-    "dist"
+    "dist",
+    "!dist/**/*.test.*",
+    "!dist/**/*.spec.*"
   ],
   "svelte": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
