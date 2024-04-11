@@ -3,7 +3,6 @@
   export let title = "";
   export let id = "";
   export let animations;
-  export let controls = 1;
 </script>
 
 <iframe
@@ -11,7 +10,6 @@
   {title}
   frameborder="0"
   allow="autoplay; picture-in-picture; clipboard-write"
-  controls={controls}
   allowfullscreen
   in:scale={animations ? { delay: 500, duration: 800 } : {}}
 />
