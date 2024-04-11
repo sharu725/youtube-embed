@@ -8,11 +8,6 @@ const config = {
   kit: {
     adapter: adapter(),
   },
-  package: {
-    dir: "package",
-    emitTypes: true,
-    exports: (file) => file === "index.js",
-  },
   optimizeDeps: {
     include: ["svelte-youtube-embed"],
   },

@@ -8,9 +8,9 @@
   export let altThumb = false;
   export let animations = true;
 
-  let title = "";
-  let width = 0;
-  let height = 0;
+  export let title = "";
+  export let width = 0;
+  export let height = 0;
 
   let videoInfo = {};
   onMount(async () => {
@@ -19,8 +19,8 @@
     );
     videoInfo = await res.json();
     title = videoInfo?.title;
-    width = videoInfo?.width;
-    height = videoInfo?.height;
+    width = width || videoInfo?.width;
+    height = height || videoInfo?.height;
   });
 
   let play = false;
@@ -41,7 +41,13 @@
     {:else}
       <Image {id} {title} {altThumb} {play} />
     {/if}
-    <div class="b__overlay" on:click={() => (play = true)} on:keypress={() => (play = true)} />
+    <div
+      class="b__overlay"
+      on:click={() => (play = true)}
+      on:keypress={() => (play = true)}
+      role="button"
+      tabindex="0"
+    />
     <div class="v__title"><h3>{title}</h3></div>
   {/if}
   {#if !play}
@@ -54,7 +60,7 @@
 <style>
   .you__tube {
     position: relative;
-    aspect-ratio: 1.76991;
+    aspect-ratio: var(--aspect-ratio);
     overflow: hidden;
   }
 
