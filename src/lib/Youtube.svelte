@@ -41,7 +41,13 @@
     {:else}
       <Image {id} {title} {altThumb} {play} />
     {/if}
-    <div class="b__overlay" on:click={() => (play = true)} on:keypress={() => (play = true)} />
+    <div
+      class="b__overlay"
+      on:click={() => (play = true)}
+      on:keypress={() => (play = true)}
+      role="button"
+      tabindex="0"
+    />
     <div class="v__title"><h3>{title}</h3></div>
   {/if}
   {#if !play}
