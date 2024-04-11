@@ -8,18 +8,17 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@sveltejs/adapter-auto": "^2.1.1",
-    "@sveltejs/adapter-vercel": "^3.1.0",
-    "@sveltejs/kit": "1.22.2",
-    "@sveltejs/package": "^1.0.2",
-    "mdsvex": "^0.10.6",
+    "@sveltejs/adapter-auto": "^3.0.0",
+    "@sveltejs/adapter-vercel": "^5.2.0",
+    "@sveltejs/kit": "^2.0.0",
+    "@sveltejs/package": "^2.0.0",
+    "mdsvex": "^0.11.0",
     "prism-svelte": "^0.5.0",
     "prismjs": "^1.29.0",
-    "svelte": "^3.59.2",
-    "svelte-youtube-embed": "^0.2.3",
-    "svelte2tsx": "^0.5.23",
-    "typescript": "^4.9.5",
-    "vite": "^4.5.3"
+    "svelte": "^4.2.7",
+    "svelte2tsx": "^0.7.6",
+    "typescript": "^5.3.2",
+    "vite": "^5.0.11"
   },
   "type": "module",
   "svelte": "./index.js",
