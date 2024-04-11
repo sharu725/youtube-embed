@@ -54,7 +54,7 @@
 <style>
   .you__tube {
     position: relative;
-    aspect-ratio: 1.76991;
+    aspect-ratio: var(--aspect-ratio);
     overflow: hidden;
   }
 
