@@ -28,6 +28,8 @@
 		"@sveltejs/kit": "^2.5.10",
 		"@sveltejs/package": "^2.3.1",
 		"@sveltejs/vite-plugin-svelte": "^3.1.1",
+		"prism-svelte": "^0.5.0",
+		"prismjs": "^1.29.0",
 		"publint": "^0.1.16",
 		"svelte": "^4.2.18",
 		"tslib": "^2.6.3",
