@@ -6,7 +6,8 @@
 		"build": "vite build && npm run package",
 		"preview": "vite preview",
 		"package": "svelte-kit sync && svelte-package && publint",
-		"prepublishOnly": "npm run package"
+		"prepublishOnly": "npm run package",
+		"vercel": "vite build"
 	},
 	"exports": {
 		".": {
@@ -23,15 +24,15 @@
 		"svelte": "^4.0.0"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "^3.0.0",
-		"@sveltejs/kit": "^2.0.0",
-		"@sveltejs/package": "^2.0.0",
-		"@sveltejs/vite-plugin-svelte": "^3.0.0",
-		"publint": "^0.1.9",
-		"svelte": "^4.2.7",
-		"tslib": "^2.4.1",
-		"typescript": "^5.3.2",
-		"vite": "^5.0.11"
+		"@sveltejs/adapter-auto": "^3.2.1",
+		"@sveltejs/kit": "^2.5.10",
+		"@sveltejs/package": "^2.3.1",
+		"@sveltejs/vite-plugin-svelte": "^3.1.1",
+		"publint": "^0.1.16",
+		"svelte": "^4.2.18",
+		"tslib": "^2.6.3",
+		"typescript": "^5.4.5",
+		"vite": "^5.2.13"
 	},
 	"svelte": "./dist/index.js",
 	"types": "./dist/index.d.ts",
