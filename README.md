@@ -1,84 +1,58 @@
-# Svelte Youtube Embed
+# create-svelte
 
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
+Read more about creating a library [in the docs](https://kit.svelte.dev/docs/packaging).
 
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
+## Creating a project
 
-Embeds a clickable youtube thumbnail instead of the iframe. Upon clicking, loads the iframe.
-
-## Why?
-
-- loads the site faster
-- responsive image & video
-
-## Installation
+If you're seeing this, you've probably already done this step. Congrats!
 
 ```bash
-npm i -D svelte-youtube-embed
+# create a new project in the current directory
+npm create svelte@latest
+
+# create a new project in my-app
+npm create svelte@latest my-app
 ```
 
-## Usage
+## Developing
 
-```html
-<script>
-  import Youtube from "svelte-youtube-embed";
-</script>
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-<Youtube id="KrSH82gg7BQ" />
+```bash
+npm run dev
 
-<!-- custom play button -->
-<Youtube id="KrSH82gg7BQ">
-  <button>play</button>
-</Youtube>
-
-<!-- Custom overlay -->
-<Youtube
-  id="KrSH82gg7BQ"
-  --overlay-bg-color="hsla(0, 0%, 0%, 0.3)"
-  --overlay-transition="all 100ms linear"
-/>
-
-<!-- Custom title -->
-<Youtube
-  id="kgZeIDSHlhQ"
-  --title-color="#111111"
-  --title-shadow-color="#cccccc"
-  --title-font-family="Lato, sans-serif"
-/>
-
-<!-- Alternative thumbnail if default thumbnail doesn't show automatically -->
-<Youtube id="g50dm1OCV3w" altThumb="{true}" />
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
 ```
 
-The `id` is youtube video id. In this video link `https://www.youtube.com/watch?v=KrSH82gg7BQ`, the id is `KrSH82gg7BQ`.
+Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
 
-## Demo
+## Building
 
-[site](https://embed.sveltethemes.dev/)
+To build your library:
 
-## Contributors ✨
+```bash
+npm run package
+```
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+To create a production version of your showcase app:
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tbody>
-    <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://computly.me"><img src="https://avatars.githubusercontent.com/u/12211826?v=4?s=100" width="100px;" alt="Amr"/><br /><sub><b>Amr</b></sub></a><br /><a href="#design-416d72" title="Design">🎨</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://webjeda.com"><img src="https://avatars.githubusercontent.com/u/8033084?v=4?s=100" width="100px;" alt="sharath Kumar"/><br /><sub><b>sharath Kumar</b></sub></a><br /><a href="#platform-sharu725" title="Packaging/porting to new platform">📦</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/kohbanye"><img src="https://avatars.githubusercontent.com/u/66658420?v=4?s=100" width="100px;" alt="koh"/><br /><sub><b>koh</b></sub></a><br /><a href="https://github.com/sharu725/youtube-embed/commits?author=kohbanye" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://knarkzel.github.io"><img src="https://avatars.githubusercontent.com/u/85593302?v=4?s=100" width="100px;" alt="Knarkzel"/><br /><sub><b>Knarkzel</b></sub></a><br /><a href="https://github.com/sharu725/youtube-embed/issues?q=author%3Aknarkzel" title="Bug reports">🐛</a></td>
-    </tr>
-  </tbody>
-</table>
+```bash
+npm run build
+```
 
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
+You can preview the production build with `npm run preview`.
 
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+## Publishing
+
+Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
+
+To publish your library to [npm](https://www.npmjs.com):
+
+```bash
+npm publish
+```
