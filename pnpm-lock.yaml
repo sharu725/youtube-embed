@@ -30,8 +30,8 @@ devDependencies:
     specifier: ^3.59.2
     version: 3.59.2
   svelte-youtube-embed:
-    specifier: ^0.2.3
-    version: 0.2.3
+    specifier: ^0.2.6
+    version: 0.2.6
   svelte2tsx:
     specifier: ^0.5.23
     version: 0.5.23(svelte@3.59.2)(typescript@4.9.5)
@@ -1057,8 +1057,8 @@ packages:
       svelte: 3.59.2
     dev: true
 
-  /svelte-youtube-embed@0.2.3:
-    resolution: {integrity: sha512-+HYK224eJ5tSEM6chZgODuSOuaXqv/l5Xj6tvvjqQfrQzdG33jyjYVNzREXIVTerdWSvyqbm5A2BpL8tdwNhQw==}
+  /svelte-youtube-embed@0.2.6:
+    resolution: {integrity: sha512-pq5/nDLSRPdXqjDBi2B7DPnoxEd/gz22NnL2Jtkg51Yn3WWAX89fkjOG9t3U17D5E7urgiTP8rQ3QMUS0+sHdg==}
     dev: true
 
   /svelte2tsx@0.5.23(svelte@3.59.2)(typescript@4.9.5):
