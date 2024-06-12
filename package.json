@@ -1,6 +1,6 @@
 {
   "name": "svelte-youtube-embed",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
@@ -16,17 +16,17 @@
     "prism-svelte": "^0.5.0",
     "prismjs": "^1.29.0",
     "svelte": "^3.59.2",
-    "svelte-youtube-embed": "^0.2.6",
+    "svelte-youtube-embed": "^0.2.8",
     "svelte2tsx": "^0.5.23",
     "typescript": "^4.9.5",
     "vite": "^4.5.3"
   },
   "type": "module",
-  "svelte": "./index.js",
+  "svelte": "./package/index.js",
   "exports": {
     ".": {
-      "types": "./index.d.ts",
-      "svelte": "./index.js"
+      "types": "./package/index.d.ts",
+      "svelte": "./package/index.js"
     }
   },
   "repository": {
