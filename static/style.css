@@ -1,0 +1,43 @@
+body {
+  font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console,
+    monospace;
+  line-height: 1.8;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  margin: 1rem auto;
+}
+.controls label {
+  margin-left: 1em;
+}
+
+@media screen and (max-width: 768px) {
+  .controls {
+    display: grid;
+  }
+  .controls label {
+    margin-left: 0em;
+    margin-top: 1em;
+  }
+}

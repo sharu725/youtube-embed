@@ -25,15 +25,3 @@
     content="Embeds a clickable youtube thumbnail instead of the iframe. Upon clicking, loads the iframe."
   />
 </svelte:head>
-
-<style>
-  :global(.controls) {
-    display: flex;
-    align-items: center;
-    margin: 1rem auto;
-  }
-  :global(.controls label) {
-    margin-left: 1em;
-  }
-</style>
-Hi

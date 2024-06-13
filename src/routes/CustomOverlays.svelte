@@ -11,14 +11,17 @@
   <label for="overlay-color-select">Overlay color</label>
   <input id="overlay-color-select" type="color" bind:value={overlayBGColor} />
   <label for="overlay-transition-duration">Overlay transition duration</label>
-  <input
-    id="overlay-transition-duration"
-    min="0"
-    max="1000"
-    type="range"
-    step="50"
-    bind:value={overlayTransitionDuration}
-  />
+  <div>
+    <input
+      id="overlay-transition-duration"
+      min="0"
+      max="1000"
+      type="range"
+      step="50"
+      bind:value={overlayTransitionDuration}
+    />
+    <small>{overlayTransitionDuration} ms</small>
+  </div>
 </div>
 
 <Youtube
@@ -35,4 +38,7 @@
   />`}
 />
 
-<p>Here the number `30` represents the opacity of `0.3`. Remove it for 100% opaqueness.</p>
+<p>
+  Here the number `30` represents the opacity of `0.3`. Remove it for 100%
+  opaqueness.
+</p>

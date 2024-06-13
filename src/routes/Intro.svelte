@@ -6,9 +6,12 @@
 <h1>Youtube Video Embed</h1>
 
 <p>
-  This provides a fast way to embed youtube videos since it loads the youtube
-  thumbnail istead of the iframe. It loads the iframe and starts playing upong
-  clicking the play button.
+  The package provides faster page load while embedding youtube videos since it
+  loads the youtube thumbnail istead of the entire iframe.
+</p>
+<p>
+  The package will load the iframe and play the video only upong clicking
+  the play button.
 </p>
 
 <h2>Installation</h2>

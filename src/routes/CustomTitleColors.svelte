@@ -2,8 +2,8 @@
   import Youtube from "$lib/Youtube.svelte";
   import Prism from "./Prism.svelte";
 
-  let titleColor = "#000000";
-  let titleShadowColor = "#ffffff";
+  let titleColor = "#ffffff";
+  let titleShadowColor = "#000000";
   let titleFontFamily = "'Segoe UI', Geneva, Verdana, sans-serif";
 </script>
 
