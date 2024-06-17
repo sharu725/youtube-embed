@@ -1,58 +1,42 @@
-# create-svelte
+<div>  <div class="container"><h1 data-svelte-h="svelte-wr14qn">Youtube Video Embed</h1> <p data-svelte-h="svelte-13nlixd">The package provides faster page load while embedding youtube videos since it
+  loads the youtube thumbnail istead of the entire iframe.</p> <p data-svelte-h="svelte-1hlxsk3">The package will load the iframe and play the video only upong clicking
+  the play button.</p> <h2 data-svelte-h="svelte-136tnhu">Installation</h2> <pre class="svelte-w3w8f2"><!-- HTML_TAG_START -->npm i -D svelte-youtube-embed<!-- HTML_TAG_END -->
+</pre> <h2 data-svelte-h="svelte-dnbfhr">Usage</h2> <pre class="svelte-w3w8f2"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">import</span> Youtube <span class="token keyword">from</span> <span class="token string">"svelte-youtube-embed"</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
-
-Read more about creating a library [in the docs](https://kit.svelte.dev/docs/packaging).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
-
-## Building
-
-To build your library:
-
-```bash
-npm run package
-```
-
-To create a production version of your showcase app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
-
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
-```
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Youtube</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>EBtsu6naB8g<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+<!-- HTML_TAG_END -->
+</pre> <h2 data-svelte-h="svelte-zcecrh">Default</h2> <div class="you__tube svelte-w0t24e" style="--aspect-ratio:16/9" title=""><img src="https://i.ytimg.com/vi/EBtsu6naB8g/maxresdefault.jpg" title="" alt="Youtube video: " referrerpolicy="no-referrer" class="svelte-hw9fhp"> <div class="b__overlay svelte-w0t24e"></div> <div class="v__title svelte-w0t24e"><h3 class="svelte-w0t24e"></h3></div> <button class="play__btn svelte-1srk8gt" aria-label="Play YouTube video" data-svelte-h="svelte-1rbdl3"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="iconify iconify--mdi" viewBox="0 0 24 24"><path fill="#ff4e45" d="m10 15 5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73Z"></path></svg></button> </div> <pre class="svelte-w3w8f2"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Youtube</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>EBtsu6naB8g<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><!-- HTML_TAG_END -->
+</pre> <h2 data-svelte-h="svelte-nf84rh">With custom play button</h2> <div class="you__tube svelte-w0t24e" style="--aspect-ratio:16/9" title=""><img src="https://i.ytimg.com/vi/EBtsu6naB8g/maxresdefault.jpg" title="" alt="Youtube video: " referrerpolicy="no-referrer" class="svelte-hw9fhp"> <div class="b__overlay svelte-w0t24e"></div> <div class="v__title svelte-w0t24e"><h3 class="svelte-w0t24e"></h3></div> <button class="custom__play__btn svelte-1srk8gt" aria-label="Play YouTube video"><button data-svelte-h="svelte-1j09344">play</button></button> </div> <pre class="svelte-w3w8f2"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Youtube</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>EBtsu6naB8g<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span><span class="token punctuation">></span></span>play<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Youtube</span><span class="token punctuation">></span></span><!-- HTML_TAG_END -->
+</pre> <h2 data-svelte-h="svelte-1r92b2h">Using custom overlay</h2> <div class="controls"><label for="overlay-color-select" data-svelte-h="svelte-15wati">Overlay color</label> <input id="overlay-color-select" type="color" value="#e5a50a"> <label for="overlay-transition-duration" data-svelte-h="svelte-1aq0tsy">Overlay transition duration</label> <div><input id="overlay-transition-duration" min="0" max="1000" type="range" step="50" value="50"> <small>50 ms</small></div></div> <div style="display: contents; --overlay-bg-color:#e5a50a30; --overlay-transition:all 50ms linear;"><div class="you__tube svelte-w0t24e" style="--aspect-ratio:16/9" title=""><img src="https://i.ytimg.com/vi/EBtsu6naB8g/maxresdefault.jpg" title="" alt="Youtube video: " referrerpolicy="no-referrer" class="svelte-hw9fhp"> <div class="b__overlay svelte-w0t24e"></div> <div class="v__title svelte-w0t24e"><h3 class="svelte-w0t24e"></h3></div> <button class="play__btn svelte-1srk8gt" aria-label="Play YouTube video" data-svelte-h="svelte-1rbdl3"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="iconify iconify--mdi" viewBox="0 0 24 24"><path fill="#ff4e45" d="m10 15 5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73Z"></path></svg></button> </div></div> <pre class="svelte-w3w8f2"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Youtube</span>
+  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>EBtsu6naB8g<span class="token punctuation">"</span></span>
+  <span class="token attr-name">--overlay-bg-color="</span><span class="token language-javascript"><span class="token punctuation">{</span>overlayBGColor<span class="token punctuation">}</span></span><span class="token attr-name">30"</span>
+  <span class="token attr-name">--overlay-transition="all</span> <span class="token language-javascript"><span class="token punctuation">{</span>overlayTransitionDuration<span class="token punctuation">}</span></span><span class="token attr-name">ms</span> <span class="token attr-name">linear"</span>
+  <span class="token punctuation">/></span></span><!-- HTML_TAG_END -->
+</pre> <p data-svelte-h="svelte-vvtw0o">Here the number `30` represents the opacity of `0.3`. Remove it for 100%
+  opaqueness.</p> <h2 data-svelte-h="svelte-15qxpdj">Using custom title colors</h2> <div class="controls"><label for="title-color-select" data-svelte-h="svelte-dxkhtu">Title color</label> <input id="title-color-select" type="color" value="#ffffff"> <label for="title-shadow-color" data-svelte-h="svelte-1tro3b0">Title shadow color</label> <input id="title-shadow-color" type="color" value="#000000"> <label for="title-font-family" data-svelte-h="svelte-15wwd70">Font family</label> <select name="title-font-family" id="title-font-family"><option value="'Roboto', sans-serif" data-svelte-h="svelte-4d3r47">Roboto</option><option value="'Segoe UI', Geneva, Verdana, sans-serif" data-svelte-h="svelte-1btdssy">Segoe UI</option><option value="'Helvetica Neue', Helvetica, Arial, sans-serif" data-svelte-h="svelte-12vntkb">Helvetica Neue</option><option value="'Times New Roman', Times, serif" data-svelte-h="svelte-bq14ql">Times New Roman</option><option value="'Courier New', Courier, monospace" data-svelte-h="svelte-dxdxvc">Courier New</option></select></div> <div style="display: contents; --title-color:#ffffff; --title-shadow-color:#00000030; --title-font-family:'Segoe UI', Geneva, Verdana, sans-serif;"><div class="you__tube svelte-w0t24e" style="--aspect-ratio:16/9" title=""><img src="https://i.ytimg.com/vi/KrSH82gg7BQ/maxresdefault.jpg" title="" alt="Youtube video: " referrerpolicy="no-referrer" class="svelte-hw9fhp"> <div class="b__overlay svelte-w0t24e"></div> <div class="v__title svelte-w0t24e"><h3 class="svelte-w0t24e"></h3></div> <button class="play__btn svelte-1srk8gt" aria-label="Play YouTube video" data-svelte-h="svelte-1rbdl3"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="iconify iconify--mdi" viewBox="0 0 24 24"><path fill="#ff4e45" d="m10 15 5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73Z"></path></svg></button> </div></div> <pre class="svelte-w3w8f2"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Youtube</span>
+  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>KrSH82gg7BQ<span class="token punctuation">"</span></span>
+  <span class="token attr-name">--title-color=</span><span class="token language-javascript"><span class="token punctuation">{</span>titleColor<span class="token punctuation">}</span></span>
+  <span class="token attr-name">--title-shadow-color="</span><span class="token language-javascript"><span class="token punctuation">{</span>titleShadowColor<span class="token punctuation">}</span></span><span class="token attr-name">30"</span>
+  <span class="token attr-name">--title-font-family=</span><span class="token language-javascript"><span class="token punctuation">{</span>titleFontFamily<span class="token punctuation">}</span></span>
+<span class="token punctuation">/></span></span><!-- HTML_TAG_END -->
+</pre> <h2 data-svelte-h="svelte-1y3xwn7">Alternative thumbnail</h2> <p data-svelte-h="svelte-nph3bp">Some videos don&#39;t have custom thumbnail, so you can use this option to set the
+  thumbnail to the default one.</p> <div class="controls"><label for="alt-thumbnail-checkbox" data-svelte-h="svelte-18dmf1q">Toggle</label> <input id="alt-thumbnail-checkbox" type="checkbox"></div> <div class="you__tube svelte-w0t24e" style="--aspect-ratio:16/9" title=""><img src="https://i.ytimg.com/vi/EBtsu6naB8g/maxresdefault.jpg" title="" alt="Youtube video: " referrerpolicy="no-referrer" class="svelte-hw9fhp"> <div class="b__overlay svelte-w0t24e"></div> <div class="v__title svelte-w0t24e"><h3 class="svelte-w0t24e"></h3></div> <button class="play__btn svelte-1srk8gt" aria-label="Play YouTube video" data-svelte-h="svelte-1rbdl3"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="iconify iconify--mdi" viewBox="0 0 24 24"><path fill="#ff4e45" d="m10 15 5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73Z"></path></svg></button> </div> <pre class="svelte-w3w8f2"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Youtube</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>EBtsu6naB8g<span class="token punctuation">"</span></span> <span class="token attr-name">altThumb=</span><span class="token language-javascript"><span class="token punctuation">{</span><span class="token boolean">true</span><span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span><!-- HTML_TAG_END -->
+</pre> <h2 data-svelte-h="svelte-wdcdcx">Disable animations</h2> <p data-svelte-h="svelte-1nd7yj2">You can disable animation that is displayed when the play button is clicked by
+  passing `animations` attribute.</p> <div class="you__tube svelte-w0t24e" style="--aspect-ratio:16/9" title=""><img src="https://i.ytimg.com/vi/EBtsu6naB8g/maxresdefault.jpg" title="" alt="Youtube video: " referrerpolicy="no-referrer" class="svelte-hw9fhp"> <div class="b__overlay svelte-w0t24e"></div> <div class="v__title svelte-w0t24e"><h3 class="svelte-w0t24e"></h3></div> <button class="play__btn svelte-1srk8gt" aria-label="Play YouTube video" data-svelte-h="svelte-1rbdl3"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="iconify iconify--mdi" viewBox="0 0 24 24"><path fill="#ff4e45" d="m10 15 5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73Z"></path></svg></button> </div> <pre class="svelte-w3w8f2"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Youtube</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>EBtsu6naB8g<span class="token punctuation">"</span></span> <span class="token attr-name">animations=</span><span class="token language-javascript"><span class="token punctuation">{</span><span class="token boolean">false</span><span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span><!-- HTML_TAG_END -->
+</pre> <h2 data-svelte-h="svelte-xhxpwp">Custom thumbnail</h2> <p data-svelte-h="svelte-e07e6k">Similar to how we can use custom play button, we can also use custom
+  thumbnails.</p> <p data-svelte-h="svelte-186y148">Use <strong>slot=&quot;thumbnail&quot;</strong> to a image/picture html tag and place it
+  inside <em>Yoututbe</em> component.</p> <div class="you__tube svelte-w0t24e" style="--aspect-ratio:16/9" title=""><img slot="thumbnail" src="https://picsum.photos/id/74/4288/2848" alt="A video on svelte" style="width: 100%; height: 100%; object-fit: cover; object-position: center; background: red"> <div class="b__overlay svelte-w0t24e"></div> <div class="v__title svelte-w0t24e"><h3 class="svelte-w0t24e"></h3></div> <button class="play__btn svelte-1srk8gt" aria-label="Play YouTube video" data-svelte-h="svelte-1rbdl3"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="iconify iconify--mdi" viewBox="0 0 24 24"><path fill="#ff4e45" d="m10 15 5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73Z"></path></svg></button> </div> <pre class="svelte-w3w8f2"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Youtube</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>EBtsu6naB8g<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span>
+    <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>thumbnail<span class="token punctuation">"</span></span>
+    <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>A video on svelte<span class="token punctuation">"</span></span>
+    <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/path/image.jpg<span class="token punctuation">"</span></span>
+    <span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width: 100%; height: 100%; object-fit: contain; object-position: center; background: red<span class="token punctuation">"</span></span>
+  <span class="token punctuation">/></span></span>
+  <span class="token comment">&lt;!-- inline styles are optional --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Youtube</span><span class="token punctuation">></span></span>
+<!-- HTML_TAG_END -->
+</pre> <ul class="svelte-1saebxd" data-svelte-h="svelte-1lnctu1"><li class="svelte-1saebxd"><a href="https://github.com/sharu725/youtube-embed">Github</a></li> <li class="svelte-1saebxd"><a href="https://www.npmjs.com/package/svelte-youtube-embed">npm</a></li> </ul> </div> 
