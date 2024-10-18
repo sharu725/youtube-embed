@@ -2,9 +2,9 @@
   <li>
     <a href="https://github.com/sharu725/youtube-embed">Github</a>
   </li>
-  <li>
+  <!-- <li>
     <a href="https://www.npmjs.com/package/svelte-youtube-embed">npm</a>
-  </li>
+  </li> -->
 </ul>
 
 <style>
