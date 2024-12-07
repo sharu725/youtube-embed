@@ -2,8 +2,7 @@
   import Prism from "prismjs";
   import "prism-svelte";
 
-  export let code = "";
-  export let language = "svelte";
+  let { code = "", language = "svelte" } = $props();
 
   const highlighted = Prism.highlight(code, Prism.languages.svelte, language);
 </script>

@@ -1,8 +1,7 @@
 <script>
   import { scale } from "svelte/transition";
-  export let title = "";
-  export let id = "";
-  export let animations;
+
+  let { title = "", id = "", animations } = $props();
 </script>
 
 <iframe
@@ -12,7 +11,7 @@
   allow="autoplay; picture-in-picture; clipboard-write"
   allowfullscreen
   in:scale={animations ? { delay: 500, duration: 800 } : {}}
-/>
+></iframe>
 
 <style>
   iframe {

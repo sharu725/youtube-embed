@@ -2,9 +2,9 @@
   import Youtube from "$lib/Youtube.svelte";
   import Prism from "./Prism.svelte";
 
-  let titleColor = "#ffffff";
-  let titleShadowColor = "#000000";
-  let titleFontFamily = "'Segoe UI', Geneva, Verdana, sans-serif";
+  let titleColor = $state("#ffffff");
+  let titleShadowColor = $state("#000000");
+  let titleFontFamily = $state("'Segoe UI', Geneva, Verdana, sans-serif");
 </script>
 
 <h2>Using custom title colors</h2>
@@ -39,8 +39,8 @@
 <Prism
   code={`<Youtube
   id="KrSH82gg7BQ"
-  --title-color={titleColor}
-  --title-shadow-color="{titleShadowColor}30"
-  --title-font-family={titleFontFamily}
+  --title-color="#ffffff"
+  --title-shadow-color="#00000030"
+  --title-font-family="'Segoe UI', Geneva, Verdana, sans-serif"
 />`}
 />

@@ -7,7 +7,6 @@ body {
 
 h1,
 h2,
-h3,
 h4,
 h5,
 h6 {
@@ -28,6 +27,7 @@ h6 {
   align-items: center;
   margin: 1rem auto;
 }
+
 .controls label {
   margin-left: 1em;
 }
@@ -36,6 +36,7 @@ h6 {
   .controls {
     display: grid;
   }
+
   .controls label {
     margin-left: 0em;
     margin-top: 1em;

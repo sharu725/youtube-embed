@@ -1,13 +1,20 @@
 <script>
-  export let isCustomPlayButton;
+  let { play_button, play = $bindable() } = $props();
 </script>
 
-{#if isCustomPlayButton}
-  <button class="custom__play__btn" on:click aria-label="Play YouTube video">
-    <slot />
+{#if play_button}
+  <button
+    class="custom__play__btn"
+    onclick={() => (play = true)}
+    aria-label="Play YouTube video"
+  >
+    {@render play_button()}
   </button>
 {:else}
-  <button class="play__btn" on:click aria-label="Play YouTube video"
+  <button
+    class="play__btn"
+    onclick={() => (play = true)}
+    aria-label="Play YouTube video"
     ><svg
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"

@@ -2,8 +2,8 @@
   import Youtube from "$lib/Youtube.svelte";
   import Prism from "./Prism.svelte";
 
-  let overlayBGColor = "#e5a50a";
-  let overlayTransitionDuration = 50;
+  let overlayBGColor = $state("#e5a50a");
+  let overlayTransitionDuration = $state(50);
 </script>
 
 <h2>Using custom overlay</h2>
@@ -33,8 +33,8 @@
 <Prism
   code={`<Youtube
   id="EBtsu6naB8g"
-  --overlay-bg-color="{overlayBGColor}30"
-  --overlay-transition="all {overlayTransitionDuration}ms linear"
+  --overlay-bg-color="#e5a50a30"
+  --overlay-transition="all 50ms linear"
   />`}
 />
 

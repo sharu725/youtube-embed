@@ -1,8 +1,5 @@
 <script>
-  export let id = "";
-  export let title = "";
-  export let altThumb = "";
-  export let play = false;
+  let { id = "", title = "", altThumb = "", play = false } = $props();
 </script>
 
 {#key play}

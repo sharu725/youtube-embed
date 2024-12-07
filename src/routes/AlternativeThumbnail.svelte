@@ -2,7 +2,7 @@
   import Youtube from "$lib/Youtube.svelte";
   import Prism from "./Prism.svelte";
 
-  let altThumb = false;
+  let altThumb = $state(false);
 </script>
 
 <h2>Alternative thumbnail</h2>

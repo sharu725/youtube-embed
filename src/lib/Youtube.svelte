@@ -4,13 +4,17 @@
   import Iframe from "./Iframe.svelte";
   import Image from "./Image.svelte";
 
-  export let id = null;
-  export let altThumb = false;
-  export let animations = true;
+  let {
+    id = null,
+    altThumb = false,
+    animations = true,
+    thumbnail,
+    play_button,
+  } = $props();
 
-  let title = "";
-  let width = 0;
-  let height = 0;
+  let title = $state("");
+  let width = $state(0);
+  let height = $state(0);
 
   let videoInfo = {};
   onMount(async () => {
@@ -23,9 +27,7 @@
     height = videoInfo?.height;
   });
 
-  let play = false;
-  const isCustomPlayButton = $$slots.default;
-  const isCustomThumbnail = $$slots.thumbnail;
+  let play = $state(false);
 </script>
 
 <div
@@ -36,19 +38,23 @@
   {#if play}
     <Iframe {id} {title} {animations} />
   {:else}
-    {#if isCustomThumbnail}
-      <slot name="thumbnail" />
+    {#if thumbnail}
+      {@render thumbnail()}
     {:else}
       <Image {id} {title} {altThumb} {play} />
     {/if}
-    <!-- svelte-ignore a11y-no-static-element-interactions (because no a11y roles map to a clickable overlay) -->
-    <div class="b__overlay" on:click={() => (play = true)} on:keypress={() => (play = true)} />
+    <div
+      class="b__overlay"
+      onclick={() => (play = true)}
+      onkeypress={() => (play = true)}
+      aria-label="video overlay"
+      role="button"
+      tabindex="0"
+    ></div>
     <div class="v__title"><h3>{title}</h3></div>
   {/if}
   {#if !play}
-    <Button on:click={() => (play = true)} {isCustomPlayButton}>
-      <slot />
-    </Button>
+    <Button bind:play {play_button}></Button>
   {/if}
 </div>
 
