@@ -51,7 +51,7 @@
       role="button"
       tabindex="0"
     ></div>
-    <div class="v__title"><h3>{title}</h3></div>
+    <div class="v__title">{title}</div>
   {/if}
   {#if !play}
     <Button bind:play {play_button}></Button>
@@ -72,7 +72,8 @@
     background: linear-gradient(to bottom, hsla(0, 0%, 0%, 0.1), transparent);
     pointer-events: none;
   }
-  .v__title h3 {
+  .v__title {
+    padding: 2ch;
     font-family: var(
       --title-font-family,
       "Segoe UI",
@@ -80,8 +81,8 @@
       Verdana,
       sans-serif
     );
+    font-size: 18px;
     color: var(--title-color, #ffffff);
-    padding: 0 2ch;
     font-weight: 400;
     text-shadow: 0px 1px 3px var(--title-shadow-color, rgb(0, 0, 0, 0.2));
   }
