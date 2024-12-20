@@ -1,6 +1,6 @@
 {
   "name": "svelte-youtube-embed",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && npm run package",
@@ -20,8 +20,8 @@
     "!dist/**/*.test.*",
     "!dist/**/*.spec.*"
   ],
-  "peerDependencies": {
-    "svelte": "^4.0.0"
+  "dependencies": {
+    "svelte": "^5.15.0"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "^3.3.1",
@@ -31,7 +31,6 @@
     "prism-svelte": "^0.5.0",
     "prismjs": "^1.29.0",
     "publint": "^0.1.16",
-    "svelte": "^5.8.1",
     "tslib": "^2.8.1",
     "typescript": "^5.7.2",
     "vite": "^5.4.11"
