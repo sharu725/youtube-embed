@@ -7,9 +7,7 @@
   const highlighted = Prism.highlight(code, Prism.languages.svelte, language);
 </script>
 
-<pre>
-{@html highlighted}
-</pre>
+<pre>{@html highlighted}</pre>
 
 <style>
   pre {
