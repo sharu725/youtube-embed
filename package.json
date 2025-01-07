@@ -1,6 +1,7 @@
 {
   "name": "svelte-youtube-embed",
   "version": "0.4.2",
+  "license": "MIT",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && npm run package",
