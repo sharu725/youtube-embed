@@ -9,6 +9,11 @@
     "prepublishOnly": "npm run package",
     "vercel": "vite build"
   },
+  "homepage": "https://embed.sveltethemes.dev/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sharu725/youtube-embed.git"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
