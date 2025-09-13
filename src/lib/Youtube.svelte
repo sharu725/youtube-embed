@@ -14,8 +14,6 @@
   } = $props();
 
   let title = $state("");
-  let width = $state(0);
-  let height = $state(0);
 
   let videoInfo = {};
   onMount(async () => {
@@ -24,8 +22,6 @@
     );
     videoInfo = await res.json();
     title = videoInfo?.title;
-    width = videoInfo?.width;
-    height = videoInfo?.height;
   });
 
   let play = $state(false);
@@ -35,11 +31,7 @@
   {#if play}
     <Iframe {id} {title} {animations} />
   {:else}
-    {#if thumbnail}
-      {@render thumbnail()}
-    {:else}
-      <Image {id} {title} {altThumb} {play} {short} />
-    {/if}
+    <Image {id} {title} {altThumb} {play} {short} {thumbnail} />
     <div
       class="b__overlay"
       onclick={() => (play = true)}

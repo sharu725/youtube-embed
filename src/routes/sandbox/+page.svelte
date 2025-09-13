@@ -2,14 +2,12 @@
   import Youtube from "$lib/Youtube.svelte";
 </script>
 
-<!-- <Youtube id="q2Y3f0lHnMs">
-  <img
-    slot="thumbnail"
-    src="https://kit.svelte.dev/_app/immutable/assets/svelte-kit-machine.93687d2d.avif"
-    alt=""
-    style="width: 100%; height: 100%; object-fit: contain; object-position: center; background: red"
-  />
-</Youtube> -->
+<Youtube id="q2Y3f0lHnMs">
+  {#snippet thumbnail()}
+    <img alt="A video on svelte" src="https://picsum.photos/id/74/4288/2848" />
+  {/snippet}
+</Youtube>
 
-<Youtube id="gX8Ys_5PhdM" short></Youtube>
+<Youtube id="l2bXQI7Sn90" short></Youtube>
+
 <Youtube id="q2Y3f0lHnMs"></Youtube>
