@@ -10,6 +10,7 @@
     animations = true,
     thumbnail,
     play_button,
+    short = false,
   } = $props();
 
   let title = $state("");
@@ -30,18 +31,14 @@
   let play = $state(false);
 </script>
 
-<div
-  class="you__tube"
-  style="--aspect-ratio:{width / height || '16/9'}"
-  {title}
->
+<div class="you__tube" style="--aspect-ratio:{short ? '9/16' : '16/9'}" {title}>
   {#if play}
     <Iframe {id} {title} {animations} />
   {:else}
     {#if thumbnail}
       {@render thumbnail()}
     {:else}
-      <Image {id} {title} {altThumb} {play} />
+      <Image {id} {title} {altThumb} {play} {short} />
     {/if}
     <div
       class="b__overlay"
@@ -61,7 +58,7 @@
 <style>
   .you__tube {
     position: relative;
-    aspect-ratio: 1.76991;
+    aspect-ratio: var(--aspect-ratio, 16/9);
     overflow: hidden;
   }
 
@@ -71,9 +68,7 @@
     width: 100%;
     background: linear-gradient(to bottom, hsla(0, 0%, 0%, 0.1), transparent);
     pointer-events: none;
-  }
-  .v__title {
-    padding: 2ch;
+    padding: 1rem;
     font-family: var(
       --title-font-family,
       "Segoe UI",
@@ -81,10 +76,18 @@
       Verdana,
       sans-serif
     );
-    font-size: 18px;
+    font-size: clamp(12px, 2.5vw, 18px);
     color: var(--title-color, #ffffff);
     font-weight: 400;
     text-shadow: 0px 1px 3px var(--title-shadow-color, rgb(0, 0, 0, 0.2));
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    max-height: 30%;
+    box-sizing: border-box;
   }
   .b__overlay {
     position: absolute;

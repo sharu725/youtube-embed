@@ -1,5 +1,11 @@
 <script>
-  let { id = "", title = "", altThumb = "", play = false } = $props();
+  let {
+    id = "",
+    title = "",
+    altThumb = "",
+    play = false,
+    short = false,
+  } = $props();
 </script>
 
 {#key play}
@@ -10,6 +16,7 @@
     {title}
     alt="Youtube video: {title}"
     referrerpolicy="no-referrer"
+    class:short-thumbnail={short}
   />
 {/key}
 
@@ -18,5 +25,13 @@
     height: auto;
     aspect-ratio: var(--aspect-ratio);
     width: 100%;
+  }
+
+  .short-thumbnail {
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: auto;
+    max-width: none;
   }
 </style>

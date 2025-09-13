@@ -7,9 +7,11 @@
   import DisableAnimations from "./DisableAnimations.svelte";
   import Footer from "./Footer.svelte";
   import CustomThumbnail from "./CustomThumbnail.svelte";
+  import Shorts from "./Shorts.svelte";
 </script>
 
 <Intro />
+<Shorts />
 <CustomPlayButton />
 <CustomOverlays />
 <CustomTitleColors />
